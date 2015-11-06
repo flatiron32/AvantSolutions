@@ -1,0 +1,23 @@
+Factors And Caching
+===================
+Time Spent: ~20 min
+Implemented in ruby, includes caching the results and both forward and reverse determination.
+
+I am confident I don't fully understand the caching part of the question as this seems to be trivial. If more information were given I woul expand the answer.
+
+Questions
+---------
+1. "What would an example implementation of the cache look like?"
+  A hash written to and read from dist as a yaml file.
+2. "What is the performance of your caching implementation?"
+  Hashes are constant time for insertion and retrieval on average. I don't have intimate knowledge of Ruby's hashing function, but it is likely O(n) for an array. I assume Ruby does a good job distributing the hashes and expanding buckets, but there could be a lot of collisions which would make insertion and retrieval more expensive.
+3. "What if you wanted to reverse the functionality.  [...] Would this change your caching algorithim?"
+  No. I am still caching in a hash. Like I said, I probably don't understand the problem
+
+Line of Credit
+===================
+Time Spent: ~60 min
+Implemented in ruby, includes output of both given senarios and an additional senario that closes out the month.
+
+The solution abuses the ledger by needing to reverse it all the time. It is the most straightforward solution, but would likely need to be optimized to account for how it is actually used.
+
